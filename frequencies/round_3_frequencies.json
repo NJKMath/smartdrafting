@@ -1,0 +1,386 @@
+[
+  {
+    "name": "Electrode-3",
+    "frequency": 1.266
+  },
+  {
+    "name": "Marowak-3",
+    "frequency": 1.266
+  },
+  {
+    "name": "Raichu-3",
+    "frequency": 1.266
+  },
+  {
+    "name": "Nidoking-3",
+    "frequency": 1.266
+  },
+  {
+    "name": "Mr. Mime-3",
+    "frequency": 1.208
+  },
+  {
+    "name": "Slaking-3",
+    "frequency": 1.208
+  },
+  {
+    "name": "Xatu-3",
+    "frequency": 1.208
+  },
+  {
+    "name": "Aerodactyl-3",
+    "frequency": 1.208
+  },
+  {
+    "name": "Dugtrio-3",
+    "frequency": 1.208
+  },
+  {
+    "name": "Alakazam-3",
+    "frequency": 1.208
+  },
+  {
+    "name": "Arcanine-3",
+    "frequency": 1.18
+  },
+  {
+    "name": "Exploud-3",
+    "frequency": 1.18
+  },
+  {
+    "name": "Rapidash-3",
+    "frequency": 1.18
+  },
+  {
+    "name": "Houndoom-3",
+    "frequency": 1.18
+  },
+  {
+    "name": "Claydol-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Dewgong-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Golduck-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Glalie-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Metagross-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Skarmory-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Swampert-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Tentacruel-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Wailord-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Whiscash-3",
+    "frequency": 1.153
+  },
+  {
+    "name": "Forretress-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Scizor-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Ampharos-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Blastoise-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Blissey-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Kangaskhan-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Kingdra-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Meganium-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Miltank-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Salamence-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Shiftry-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Weezing-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Blaziken-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Typhlosion-3",
+    "frequency": 1.1
+  },
+  {
+    "name": "Crobat-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Fearow-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Feraligatr-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Flygon-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Medicham-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Sceptile-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Magmar-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Venusaur-3",
+    "frequency": 1.075
+  },
+  {
+    "name": "Heracross-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Shuckle-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Dusclops-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Exeggutor-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Jolteon-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Lanturn-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Ludicolo-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Milotic-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Ninetales-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Umbreon-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Victreebel-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Vileplume-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Tauros-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Cradily-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Breloom-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Lapras-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Misdreavus-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Aggron-3",
+    "frequency": 1.05
+  },
+  {
+    "name": "Altaria-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Charizard-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Clefable-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Dodrio-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Electabuzz-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Espeon-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Gardevoir-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Hypno-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Manectric-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Muk-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Nidoqueen-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Porygon2-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Starmie-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Ursaring-3",
+    "frequency": 0.936
+  },
+  {
+    "name": "Armaldo-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Donphan-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Gengar-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Gyarados-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Jynx-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Slowbro-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Slowking-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Snorlax-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Vaporeon-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Machamp-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Granbull-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Steelix-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Walrein-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Flareon-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Golem-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Hariyama-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Quagsire-3",
+    "frequency": 0.856
+  },
+  {
+    "name": "Rhydon-3",
+    "frequency": 0.856
+  }
+]

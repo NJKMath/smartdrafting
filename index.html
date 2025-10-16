@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Factory AutoDrafting</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Battle Factory AutoDrafting</h1>
+    </div>
+
+    <div class="tab-nav">
+        <button class="tab-button active" onclick="switchTab('overview', this)">Overview</button>
+        <button class="tab-button" onclick="switchTab('search', this)">Search</button>
+        <button class="tab-button" onclick="switchTab('draft', this)">Draft</button>
+        <button class="tab-button" onclick="switchTab('about', this)">About</button>
+    </div>
+
+    <div id="overview-tab" class="tab-content active">
+        <div class="data-selector">
+            <h3>Select Data Set</h3>
+            <div class="selector-buttons">
+                <button class="data-button active" onclick="loadDataSet('round1', this)">Round 1</button>
+                <button class="data-button" onclick="loadDataSet('round2table', this)">Round 2 Table</button>
+                <button class="data-button" onclick="loadDataSet('round2opponents', this)">Round 2 Opponents</button>
+                <button class="data-button" onclick="loadDataSet('round3table', this)">Round 3 Table</button>
+                <button class="data-button" onclick="loadDataSet('round3opponents', this)">Round 3 Opponents</button>
+                <button class="data-button" onclick="loadDataSet('round4table', this)">Round 4 Table</button>
+                <button class="data-button" onclick="loadDataSet('round4elevations', this)">Round 4 Elevations</button>
+                <button class="data-button" onclick="loadDataSet('round4opponents', this)">Round 4 Opponents</button>
+                <button class="data-button" onclick="loadDataSet('round5p15iv', this)">Round 5+ 15IV</button>
+                <button class="data-button" onclick="loadDataSet('round5p21iv', this)">Round 5+ 21IV</button>
+                <button class="data-button" onclick="loadDataSet('round5p31iv', this)">Round 5+ 31IV</button>
+                <button class="data-button" onclick="loadDataSet('round5popponents', this)">Round 5+ Opponents</button>
+            </div>
+        </div>
+
+        <div id="loading-status" class="status info hidden">Loading data...</div>
+
+        <div id="results-container" class="hidden">
+            <div class="overview-grid">
+                <div class="top-sets">
+                    <h3>Top 20 Sets (Highest Average)</h3>
+                    <ul id="top-sets-list" class="set-list"></ul>
+                </div>
+                <div class="bottom-sets">
+                    <h3>Bottom 20 Sets (Lowest Average)</h3>
+                    <ul id="bottom-sets-list" class="set-list"></ul>
+                </div>
+            </div>
+            
+            <div class="teams-section">
+                <h3>Top 20 Teams</h3>
+                <ul id="top-teams-list" class="set-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="search-tab" class="tab-content">
+        <div class="search-controls">
+            <h3>Select Data Set</h3>
+            <div class="selector-buttons">
+                <button class="data-button" onclick="loadSearchDataSet('round1', this)">Round 1</button>
+                <button class="data-button" onclick="loadSearchDataSet('round2table', this)">Round 2 Table</button>
+                <button class="data-button" onclick="loadSearchDataSet('round2opponents', this)">Round 2 Opponents</button>
+                <button class="data-button" onclick="loadSearchDataSet('round3table', this)">Round 3 Table</button>
+                <button class="data-button" onclick="loadSearchDataSet('round3opponents', this)">Round 3 Opponents</button>
+                <button class="data-button" onclick="loadSearchDataSet('round4table', this)">Round 4 Table</button>
+                <button class="data-button" onclick="loadSearchDataSet('round4elevations', this)">Round 4 Elevations</button>
+                <button class="data-button" onclick="loadSearchDataSet('round4opponents', this)">Round 4 Opponents</button>
+                <button class="data-button" onclick="loadSearchDataSet('round5p15iv', this)">Round 5+ 15IV</button>
+                <button class="data-button" onclick="loadSearchDataSet('round5p21iv', this)">Round 5+ 21IV</button>
+                <button class="data-button active" onclick="loadSearchDataSet('round5p31iv', this)">Round 5+ 31IV</button>
+                <button class="data-button" onclick="loadSearchDataSet('round5popponents', this)">Round 5+ Opponents</button>
+            </div>
+        </div>
+        
+        <div id="search-status" class="status info hidden"></div>
+        
+        <div class="search-controls">
+            <h3>Search for a Pokemon Set</h3>
+            <div class="search-input-container">
+                <input type="text" id="search-pokemon-input" class="search-input" placeholder="Type to search for a Pokemon set..." autocomplete="off">
+                <div id="search-pokemon-dropdown" class="dropdown"></div>
+            </div>
+        </div>
+        
+        <div id="matchup-results-container" class="hidden">
+            <div class="matchup-results">
+                <div class="set-info-header">
+                    <div class="set-info-details">
+                        <div class="set-info-title" id="selected-pokemon-name"></div>
+                        <div class="set-info-row" id="selected-pokemon-ability"></div>
+                        <div class="set-info-row" id="selected-pokemon-item"></div>
+                        <div class="set-info-row" id="selected-pokemon-moves"></div>
+                        <div class="set-info-row" id="selected-pokemon-average"></div>
+                    </div>
+                    <div class="filter-controls">
+                        <div class="filter-group">
+                            <label class="filter-label">Filter by Type:</label>
+                            <select id="type-filter" class="filter-select" onchange="applyTypeFilter()">
+                                <option value="">All Types</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Fire">Fire</option>
+                                <option value="Water">Water</option>
+                                <option value="Electric">Electric</option>
+                                <option value="Grass">Grass</option>
+                                <option value="Ice">Ice</option>
+                                <option value="Fighting">Fighting</option>
+                                <option value="Poison">Poison</option>
+                                <option value="Ground">Ground</option>
+                                <option value="Flying">Flying</option>
+                                <option value="Psychic">Psychic</option>
+                                <option value="Bug">Bug</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Ghost">Ghost</option>
+                                <option value="Dragon">Dragon</option>
+                                <option value="Dark">Dark</option>
+                                <option value="Steel">Steel</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Filter by Pokemon:</label>
+                            <div class="filter-input-container">
+                                <input type="text" id="pokemon-filter-input" class="search-input" placeholder="Search pokemon..." autocomplete="off">
+                                <div id="pokemon-filter-dropdown" class="filter-dropdown dropdown"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="matchup-groups-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="draft-tab" class="tab-content">
+        <div class="search-controls">
+            <h3>Select Round</h3>
+            <div class="selector-buttons">
+                <button class="data-button" onclick="selectDraftRound('round1', this)">Round 1</button>
+                <button class="data-button" onclick="selectDraftRound('round2', this)">Round 2</button>
+                <button class="data-button" onclick="selectDraftRound('round3', this)">Round 3</button>
+                <button class="data-button" onclick="selectDraftRound('round4', this)">Round 4</button>
+                <button class="data-button active" onclick="selectDraftRound('round5', this)">Round 5+</button>
+            </div>
+        </div>
+        
+        <div class="search-controls">
+            <h3>Draft Type</h3>
+            <div class="selector-buttons">
+                <button class="data-button active" onclick="selectDraftType('table', this)">Table</button>
+                <button class="data-button" onclick="selectDraftType('swap', this)">Swap</button>
+            </div>
+        </div>
+        
+        <div class="search-controls">
+            <h3>Type/Phrase: Coming Soon</h3>
+        </div>
+        
+        <div id="draft-table-container">
+            <div class="search-controls">
+                <h3>Enter Your Team</h3>
+                <div class="quick-team-container">
+                    <label class="quick-team-label">Enter Full Table:</label>
+                    <input type="text" id="quick-team-table-input" class="quick-team-input" placeholder="e.g. Vaporeon4/Latios8/Scizor4/Slaking3/Blaziken4/Tyranitar9">
+                    <button class="quick-team-button" onclick="loadQuickTeamTable()">Load Team</button>
+                </div>
+                <div id="draft-team-slots"></div>
+                <button onclick="calculateDraft()" style="margin-top: 20px; width: 100%;">Calculate Draft</button>
+            </div>
+            
+            <div id="draft-results" class="hidden">
+                <div class="matchup-results">
+                    <h3>Draft Results</h3>
+                    <div id="draft-results-content"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="draft-swap-container" class="hidden">
+            <div class="search-controls">
+                <div class="swap-grid">
+                    <div class="swap-team">
+                        <div class="swap-team-title">Your Current Team</div>
+                        <div class="quick-team-container" style="margin-bottom: 15px;">
+                            <label class="quick-team-label">Enter Full Team:</label>
+                            <input type="text" id="quick-team-swap-input" class="quick-team-input" placeholder="e.g. Vaporeon4/Latios8/Scizor4">
+                            <button class="quick-team-button" onclick="loadQuickTeamSwap()">Load Team</button>
+                        </div>
+                        <div class="draft-slots-grid" id="swap-your-team-slots"></div>
+                    </div>
+                    <div class="swap-team">
+                        <div class="swap-team-title">Opponent's Team</div>
+                        <div class="draft-slots-grid" id="swap-opponent-team-slots"></div>
+                    </div>
+                </div>
+                <button onclick="calculateSwaps()" style="margin-top: 20px; width: 100%;">Calculate Best Swaps</button>
+            </div>
+            
+            <div id="swap-results" class="hidden">
+                <div class="matchup-results">
+                    <h3>Results</h3>
+                    <div id="swap-results-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-tab" class="tab-content">
+        <div class="about-content">
+            <h2>About</h2>
+            
+            <p>This website was designed as a data-based approach to drafting in the Gen 3 Battle Factory. Each Pokemon matchup has been assigned a score from 0 to 1, with 1 being a perfect victory (100% outspeed and OHKO). The score includes not just winrate but also margin of victory, so it factors in things like damage taken, status conditions, boosts, and so on. These scores were assigned via a custom version of poke-engine's MCTS (<a href="https://github.com/pmariglia/poke-engine" target="_blank" rel="noopener noreferrer">https://github.com/pmariglia/poke-engine</a>). Note that individual matchup scores can be inaccurate for a variety of reasons, but the overall results are generally reasonable.</p>
+            
+            <p>The Overview and Search tabs are fairly self-explanatory. The Draft tab allows two different options: Table and Swap. For the Table drafting, make sure you enter the correct IVs for your Pokemon to get the most accurate results. If your Pokemon has random IVs (possible in Rounds 8 and 9 of Open Level), selecting "Random" will treat it as if it were 3IV. For Swap, if you don't know the opponent's set, you can select which ones are possible based on what moves you saw, or select "Any", and it will summarize which swaps should be beneficial. Both Table and Swap use the "Best Answer" scoring for teambuilding: the team's score against a matchup is the highest individual matchup score of the three Pokemon on that team. Individual averages are also shown, to see which Pokemon are individually the strongest options.</p>
+            
+            <p>Right now, the teambuilding is only for the "General Score" using the average frequencies of sets. Support for the "Counter Score" using Type/Phrase information will be added soon. If there are any other features that you feel are missing, please let me know, either via email (njkmath@gmail.com) or by joining my Discord: <a href="https://discord.gg/T7B5rHp2ef" target="_blank" rel="noopener noreferrer">https://discord.gg/T7B5rHp2ef</a></p>
+            
+            <h3>Links</h3>
+            <ul class="about-links">
+                <li><a href="https://njkmath.github.io/projects/" target="_blank" rel="noopener noreferrer">Other Projects</a></li>
+                <li><a href="https://www.youtube.com/watch?v=WMPmVvY7xW4" target="_blank" rel="noopener noreferrer">Algorithmic Drafting in the Battle Factory Video</a></li>
+                <li><a href="https://www.youtube.com/watch?v=yRorS8nslgM" target="_blank" rel="noopener noreferrer">Algorithmic Drafting: Long Version</a></li>
+                <li>Website Overview: (coming soon)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Load all JavaScript files -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/draft.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

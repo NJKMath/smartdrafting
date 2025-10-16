@@ -1,0 +1,386 @@
+[
+  {
+    "name": "Dewgong-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Dugtrio-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Hypno-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Marowak-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Muk-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Shiftry-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Vaporeon-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Glalie-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Rapidash-1",
+    "frequency": 1.199
+  },
+  {
+    "name": "Ampharos-1",
+    "frequency": 1.172
+  },
+  {
+    "name": "Magmar-1",
+    "frequency": 1.172
+  },
+  {
+    "name": "Manectric-1",
+    "frequency": 1.172
+  },
+  {
+    "name": "Ninetales-1",
+    "frequency": 1.172
+  },
+  {
+    "name": "Xatu-1",
+    "frequency": 1.172
+  },
+  {
+    "name": "Fearow-1",
+    "frequency": 1.172
+  },
+  {
+    "name": "Flareon-1",
+    "frequency": 1.146
+  },
+  {
+    "name": "Tentacruel-1",
+    "frequency": 1.146
+  },
+  {
+    "name": "Steelix-1",
+    "frequency": 1.146
+  },
+  {
+    "name": "Victreebel-1",
+    "frequency": 1.146
+  },
+  {
+    "name": "Vileplume-1",
+    "frequency": 1.146
+  },
+  {
+    "name": "Tauros-1",
+    "frequency": 1.146
+  },
+  {
+    "name": "Armaldo-1",
+    "frequency": 1.12
+  },
+  {
+    "name": "Slaking-1",
+    "frequency": 1.12
+  },
+  {
+    "name": "Machamp-1",
+    "frequency": 1.12
+  },
+  {
+    "name": "Skarmory-1",
+    "frequency": 1.12
+  },
+  {
+    "name": "Altaria-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Arcanine-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Crobat-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Electabuzz-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Granbull-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Salamence-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Jolteon-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Lanturn-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Breloom-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Aerodactyl-1",
+    "frequency": 1.095
+  },
+  {
+    "name": "Shuckle-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Blissey-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Dodrio-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Donphan-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Exploud-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Weezing-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Raichu-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Umbreon-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Venusaur-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Whiscash-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Meganium-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Flygon-1",
+    "frequency": 1.071
+  },
+  {
+    "name": "Blastoise-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Blaziken-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Claydol-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Espeon-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Feraligatr-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Gyarados-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Kingdra-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Ludicolo-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Slowbro-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Wailord-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Golduck-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Jynx-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Starmie-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Exeggutor-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Milotic-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Nidoking-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Swampert-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Ursaring-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Aggron-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Golem-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Rhydon-1",
+    "frequency": 1.047
+  },
+  {
+    "name": "Slowking-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Gardevoir-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Mr. Mime-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Porygon2-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Sceptile-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Walrein-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Gengar-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Lapras-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Dusclops-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Snorlax-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Metagross-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Clefable-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Cradily-1",
+    "frequency": 0.915
+  },
+  {
+    "name": "Heracross-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Scizor-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Forretress-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Houndoom-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Alakazam-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Charizard-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Hariyama-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Kangaskhan-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Medicham-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Nidoqueen-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Quagsire-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Typhlosion-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Misdreavus-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Electrode-1",
+    "frequency": 0.876
+  },
+  {
+    "name": "Miltank-1",
+    "frequency": 0.876
+  }
+]
