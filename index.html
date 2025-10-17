@@ -6,9 +6,17 @@
     <title>Battle Factory AutoDrafting</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-theme="dark">
     <div class="header">
         <h1>Battle Factory AutoDrafting</h1>
+    </div>
+
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()" id="dark-mode-toggle">
+        <div class="theme-slider">
+            <div class="theme-slider-bg"></div>
+            <img src="Solrock.png" alt="Light mode" class="theme-icon" id="solrock-icon">
+            <img src="Lunatone.png" alt="Dark mode" class="theme-icon" id="lunatone-icon">
+        </div>
     </div>
 
     <div class="tab-nav">
@@ -236,5 +244,6 @@
     <script src="js/search.js"></script>
     <script src="js/draft.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
 </body>
 </html>
