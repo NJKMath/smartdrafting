@@ -369,7 +369,7 @@ function createDraftResultCard(result, index) {
         card.style.opacity = '0.5';
         card.innerHTML = `
             <div class="draft-result-name">Slot ${index + 1}: ${result.name}</div>
-            <div style="font-size: 14px; color: #999; margin-top: 8px;"><strong>Average:</strong> 0.000</div>
+            <div class="draft-result-info"><strong>Average:</strong> 0.000</div>
         `;
     } else {
         const parsedName = parseSetName(result.name);
@@ -379,7 +379,7 @@ function createDraftResultCard(result, index) {
         let setInfoHTML = '';
         if (setData) {
             setInfoHTML = `
-                <div style="font-size: 12px; color: #666; margin: 8px 0;">
+                <div class="draft-result-info">
                     <div><strong>Ability:</strong> ${setData.abilities}</div>
                     <div><strong>Item:</strong> ${setData.item}</div>
                     <div><strong>Moves:</strong> ${setData.move1} / ${setData.move2} / ${setData.move3} / ${setData.move4}</div>
@@ -390,7 +390,7 @@ function createDraftResultCard(result, index) {
         card.innerHTML = `
             <div class="draft-result-name">Slot ${index + 1}: ${result.name}</div>
             ${setInfoHTML}
-            <div style="font-size: 14px; color: #28a745; margin-top: 8px; font-weight: bold;">
+            <div class="draft-result-average-display">
                 <strong>Average:</strong> ${result.average.toFixed(3)}
             </div>
         `;
@@ -405,16 +405,12 @@ function createDraftTeamsSection(validResults) {
     
     const title = document.createElement('h4');
     title.textContent = 'Top Team Combinations';
-    title.style.marginTop = '30px';
-    title.style.marginBottom = '15px';
     section.appendChild(title);
     
     const teams = calculateDraftTeams(validResults);
     
     const teamsList = document.createElement('div');
-    teamsList.style.background = '#f8f9fa';
-    teamsList.style.padding = '15px';
-    teamsList.style.borderRadius = '8px';
+    teamsList.className = 'draft-teams-list';
     
     teams.forEach((team, index) => {
         const teamItem = createDraftTeamItem(team, index, teams.length);
@@ -428,16 +424,18 @@ function createDraftTeamsSection(validResults) {
 // Create draft team item
 function createDraftTeamItem(team, index, totalTeams) {
     const teamItem = document.createElement('div');
-    teamItem.style.padding = '10px 0';
-    teamItem.style.borderBottom = index < totalTeams - 1 ? '1px solid #dee2e6' : 'none';
-    teamItem.style.display = 'flex';
-    teamItem.style.justifyContent = 'space-between';
-    teamItem.style.alignItems = 'center';
+    teamItem.className = 'draft-team-item';
     
-    teamItem.innerHTML = `
-        <span style="font-weight: 500;">${team.displayName}</span>
-        <span style="font-weight: bold; color: #6f42c1; font-size: 16px;">${team.score.toFixed(3)}</span>
-    `;
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'draft-team-name';
+    nameSpan.textContent = team.displayName;
+    
+    const scoreSpan = document.createElement('span');
+    scoreSpan.className = 'draft-team-score';
+    scoreSpan.textContent = team.score.toFixed(3);
+    
+    teamItem.appendChild(nameSpan);
+    teamItem.appendChild(scoreSpan);
     
     return teamItem;
 }

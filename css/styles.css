@@ -612,10 +612,63 @@ body {
     margin-bottom: 8px;
 }
 
+.draft-result-info {
+    font-size: 12px;
+    color: var(--text-color);
+    margin: 8px 0;
+}
+
+.draft-result-info div {
+    margin-bottom: 4px;
+}
+
+.draft-result-average-display {
+    font-size: 14px;
+    color: #28a745;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
 .draft-result-average {
     font-size: 24px;
     font-weight: bold;
     color: #28a745;
+}
+
+/* Draft Team Combinations */
+#draft-results-content h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.draft-teams-list {
+    background: var(--hover-bg);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.draft-team-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--button-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.draft-team-item:last-child {
+    border-bottom: none;
+}
+
+.draft-team-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.draft-team-score {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 16px;
 }
 
 /* Swap Components */
