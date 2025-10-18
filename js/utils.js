@@ -23,17 +23,62 @@ function parseSetName(fullName) {
     }
 }
 
+// Extract base Pokemon name without ability suffix
+// e.g., "Aerodactyl-1-RockHead" -> "Aerodactyl-1"
+function extractBaseName(setName) {
+    const parts = setName.split('-');
+    
+    // Typical formats:
+    // Pokemon-SetNumber (e.g., "Aerodactyl-1")
+    // Pokemon-SetNumber-Ability (e.g., "Aerodactyl-1-RockHead")
+    
+    if (parts.length >= 3) {
+        // Check if second part is a number (set number)
+        const secondPart = parts[1];
+        if (/^\d+$/.test(secondPart)) {
+            // Return Pokemon-SetNumber (first two parts)
+            return parts.slice(0, 2).join('-');
+        }
+    }
+    
+    // If only 2 parts or format doesn't match expected pattern, return as-is
+    return setName;
+}
+
 // Calculate weighted average using frequency data
+// Properly handles ability variants by splitting frequencies
 function calculateWeightedAverage(scores, round) {
     const freqMap = STATE.frequencyData[round] || {};
     
+    // First, group scores by base Pokemon name and count variants
+    const baseNameGroups = {};
+    
+    for (const [opponent, score] of Object.entries(scores)) {
+        // Extract base name (removes ability suffix)
+        const baseName = extractBaseName(opponent);
+        
+        if (!baseNameGroups[baseName]) {
+            baseNameGroups[baseName] = {
+                scores: [],
+                baseFrequency: freqMap[baseName] || CONFIG.defaults.defaultFrequencyWeight
+            };
+        }
+        
+        baseNameGroups[baseName].scores.push(score);
+    }
+    
+    // Calculate weighted average with split frequencies
     let totalWeightedScore = 0;
     let totalWeight = 0;
     
-    for (const [opponent, score] of Object.entries(scores)) {
-        const weight = freqMap[opponent] || CONFIG.defaults.defaultFrequencyWeight;
-        totalWeightedScore += score * weight;
-        totalWeight += weight;
+    for (const [baseName, group] of Object.entries(baseNameGroups)) {
+        const numVariants = group.scores.length;
+        const weightPerVariant = group.baseFrequency / numVariants;
+        
+        group.scores.forEach(score => {
+            totalWeightedScore += score * weightPerVariant;
+            totalWeight += weightPerVariant;
+        });
     }
     
     return totalWeight > 0 ? totalWeightedScore / totalWeight : 0;
